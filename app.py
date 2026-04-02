@@ -32,6 +32,12 @@ X = pd.get_dummies(X, drop_first=True)
 
 # 3. Ensure all data is numeric
 X = X.astype(float)
+import pandas as pd
+
+# Convert categorical columns
+X = pd.get_dummies(X, drop_first=True)
+
+# Train model
 model.fit(X, y)
 
 # ---- UI ----
