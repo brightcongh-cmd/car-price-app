@@ -1,13 +1,8 @@
 import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-import pandas as pd
 
-# Convert categorical columns
-X = pd.get_dummies(X, drop_first=True)
 
-# Train model
-model.fit(X, y)
 
 st.set_page_config(page_title="Car Price Predictor", layout="centered")
 
