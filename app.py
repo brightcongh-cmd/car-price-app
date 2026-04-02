@@ -23,6 +23,15 @@ X = pd.get_dummies(X, columns=['Manufacturer'], drop_first=True)
 
 # Train model
 model = LinearRegression()
+# 1. Remove missing values
+X = X.dropna()
+y = y.loc[X.index]
+
+# 2. Convert categorical columns to numbers
+X = pd.get_dummies(X, drop_first=True)
+
+# 3. Ensure all data is numeric
+X = X.astype(float)
 model.fit(X, y)
 
 # ---- UI ----
